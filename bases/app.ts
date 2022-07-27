@@ -1,6 +1,10 @@
-const msg: string = 'Hello world';
-const heroe = {
-    name: 'Marcel',
-    age: 42
-}
-console.log(heroe.age);
+(()=>{
+    let a: number = 10;
+
+    const sayHello = (msg: string)=>{
+        console.log(msg);
+    }
+
+    sayHello('Hello world!!!!!');
+
+})();
