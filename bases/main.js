@@ -1,5 +1,17 @@
 "use strict";
 (() => {
+    class Mutant {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+        }
+    }
+    class XmenChar extends Mutant {
+    }
+    const wolverine = new XmenChar('Wolverine', 'Logan');
+    console.log('abstaract', wolverine);
+})();
+(() => {
     class Avenger {
         constructor(name, team, realName) {
             this.name = name;
