@@ -29,4 +29,28 @@
     console.log(batman.getName());
     console.log(AvengerShort.getAvgAge());
 })();
+(() => {
+    class AvengerExtend {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+            console.log('avenger constructor called');
+        }
+        getFullName() {
+            return `${this.name} ${this.realName}`;
+        }
+    }
+    const blackWidow = new AvengerExtend('Black Widow', 'Natasha');
+    class XMen extends AvengerExtend {
+        constructor(name, realName, isMutant) {
+            super(name, realName);
+            this.isMutant = isMutant;
+        }
+        getFullNameFromXmen() {
+            return this.getFullName();
+        }
+    }
+    const wolverine = new XMen('Wolverine', 'Logan', true);
+    console.log(wolverine.getFullNameFromXmen());
+})();
 //# sourceMappingURL=main.js.map
