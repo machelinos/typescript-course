@@ -77,4 +77,24 @@
     const wolverine = new XMen('Wolverine', 'Logan', true);
     console.log(wolverine.getFullNameFromXmen());
 })();
+(() => {
+    class Apocalipsis {
+        constructor(name) {
+            this.name = name;
+        }
+        static callApocalipsis() {
+            if (!Apocalipsis.instance) {
+                Apocalipsis.instance = new Apocalipsis('Im Apocalypto');
+            }
+            return Apocalipsis.instance;
+        }
+        setName(name) {
+            this.name = name;
+        }
+    }
+    const apocalipsis = Apocalipsis.callApocalipsis();
+    const apocalipsisNew = Apocalipsis.callApocalipsis();
+    apocalipsisNew.setName('im other apocalyptos');
+    console.log(apocalipsis, apocalipsisNew);
+})();
 //# sourceMappingURL=main.js.map
