@@ -102,5 +102,8 @@
   },
     "exclude": [
       "exclude"
-    ]
+    ],
+    "include": [
+      "classes"
+    ],
 }
