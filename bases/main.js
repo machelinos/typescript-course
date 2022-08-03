@@ -28,4 +28,11 @@
     const natasha = new Person('Black Widow', 'Natasha');
     console.log(natasha.getFullName());
 })();
+(() => {
+    let addNumbersFunc;
+    addNumbersFunc = (a, b) => {
+        return a + b;
+    };
+    console.log(addNumbersFunc(1, 45));
+})();
 //# sourceMappingURL=main.js.map
