@@ -12,6 +12,7 @@ import { genericFunction, genericFunctionArrow } from "./generics/generics";
 
 // we can group imoprts from same folder
 import { HeroInterface, VillainInterface } from './interfaces';
+import { getPokemon } from "./generics/getPokemon";
 
 const batman : Hero = new Hero('Batman', 2, 35);
 
@@ -37,3 +38,14 @@ const deadpool: VillainInterface = {
 }
 
 console.log(genericFunction(deadpool));
+
+
+// Generic with http requests
+getPokemon(54)
+    .then(resp=>{
+        console.log(resp);
+    }).catch(e=>{
+        console.log(e);
+    }).finally(()=>{
+        console.log('Finished getting pokemon');
+    })
