@@ -18,3 +18,5 @@ console.log(batman);
 console.log(drHorrible);
 console.log(multiple2);
 console.log(whatever);
+
+console.log(batman.power);
