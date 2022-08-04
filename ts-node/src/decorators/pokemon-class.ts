@@ -10,7 +10,12 @@ const printToConsoleConditional = (print: boolean = false): Function=>{
     }
 }
 
+const blockPrototype = function(constructor: Function){
+    Object.seal( constructor);
+    Object.seal( constructor.prototype);
+}
 
+@blockPrototype
 @printToConsoleConditional(false)
 export class Pokemon {
     public api = 'https://pokemonapi.com';

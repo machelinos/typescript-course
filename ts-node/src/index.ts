@@ -54,3 +54,5 @@ getPokemon(54)
 
 // Using decorators
 const psyduck = new Pokemon('Psyduck');
+// error beacuse we defined pokemon as not extensible in our blockprototype decorator
+(Pokemon.prototype as any).whatever = 'yea right';
