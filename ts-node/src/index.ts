@@ -8,6 +8,8 @@ import * as MultipleClasses from "./classes/Multiples";
 // we can import default exports (not named) with any name we want
 import whatever from "./data/powers";
 
+import { genericFunction, genericFunctionArrow } from "./generics/generics";
+
 const batman : Hero = new Hero('Batman', 2, 35);
 
 const drHorrible: Superbad = new Superbad('Dr. Horrible', 'Phd in horribleness', 25);
@@ -20,3 +22,8 @@ console.log(multiple2);
 console.log(whatever);
 
 console.log(batman.power);
+
+
+// Generics
+console.log(genericFunction(123));
+console.log(genericFunctionArrow('Hola Mundo'));
