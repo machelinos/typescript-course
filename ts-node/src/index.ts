@@ -13,6 +13,7 @@ import { genericFunction, genericFunctionArrow } from "./generics/generics";
 // we can group imoprts from same folder
 import { HeroInterface, VillainInterface } from './interfaces';
 import { getPokemon } from "./generics/getPokemon";
+import { Pokemon } from "./decorators/pokemon-class";
 
 const batman : Hero = new Hero('Batman', 2, 35);
 
@@ -49,3 +50,7 @@ getPokemon(54)
     }).finally(()=>{
         console.log('Finished getting pokemon');
     })
+
+
+// Using decorators
+const psyduck = new Pokemon('Psyduck');
