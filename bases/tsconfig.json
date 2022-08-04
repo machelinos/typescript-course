@@ -104,6 +104,6 @@
       "exclude"
     ],
     "include": [
-      "interfaces"
+      "namespaces"
     ],
 }
