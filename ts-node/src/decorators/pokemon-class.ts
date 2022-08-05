@@ -28,9 +28,31 @@ const validatePokemonId = ( ):Function =>{
     }
 }
 
+const readonly = (isWritable: boolean = true): Function => {
+    return (target: any, propertyKey: string) =>{
+        const descriptor: PropertyDescriptor = {
+            get() {
+                console.log('getter', this);
+                return 'YO';
+            },
+            set(this, val) {
+                // console.log(this, val);
+                Object.defineProperty(this, propertyKey, {
+                    value: val,
+                    writable: !isWritable,
+                    enumerable: false
+                });
+            }
+        }
+
+        return descriptor;
+    }
+}
+
 @blockPrototype
 @printToConsoleConditional(false)
 export class Pokemon {
+    @readonly(true)
     public api = 'https://pokemonapi.com';
 
     constructor(
